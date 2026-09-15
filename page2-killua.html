@@ -4,24 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunterpedia: Killua</title>
-    <link rel="stylesheet" href="assets/css/killua-theme.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/killua-theme.css">
 </head>
 <body>
-    <header class="header">
-        <a href="/index.html" class="home-page"><h1>Hunterpedia</h1></a>
+    <!-- keep everything in a container -->
+    <div class="container">
         <nav class="navbar">
-            <a href="/page1-gon.html">Gon</a>
-            <a href="/page2-killua.html">Killua</a>
-            <a href="/page3-kurapika.html">Kurapika</a>
-            <a href="/page4-leorio.html">Leorio</a>
-            <a href="/page5-hisoka.html">Hisoka</a>
+            <div class="logo">
+                <a href="/index.html"><h2>Hunterpedia</h2></a>
+            </div>
+            <div class="dropdown">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/page1-gon.html">Gon</a></li>
+                <li><a href="/page2-killua.html">Killua</a></li>
+                <li><a href="/page3-kurapika.html">Kurapika</a></li>
+                <li><a href="/page4-leorio.html">Leorio</a></li>
+                <li><a href="/page5-hisoka.html">Hisoka</a></li>
+            </ul>
         </nav>
-    </header>
-    <main>
+        <main class="site">
+            <div class="img-container">
+                <img src="/img/home-killua.webp" alt="Killua Zoldyck">
+                <img src="/img/killua.jpg" alt="Killuaura">
+            </div>
+            <p class="firstline">Killua Zoldyck is another young Hunter, born and raised an assassin.</p>
+            <p class="desc">Killua is one of the youngest in a family of assassins, all bent on killing for business.
+                He first went to the Hunter Exam to escape his home circumstances. This was when
+                he met Gon, his first real friend who changed his life perspective. Instead of living as a cold
+                blooded assassin, Killua wishes to do more with his life, forming connections and making
+                memories. However his brother, Illumi, fears Killua slipped out of his control, and will do whatever
+                he can to make sure he remembers his place.
+            </p>
+            <p class="fun-fact">He uses his assassin instinct and ability to aid him in battle, though he
+                also uses a YoYo to fight. He's also learned to control and use electricity!
+            </p>
+        </main>
+    </div>  
 
-    </main>
-    <footer>
-
-    </footer>
 </body>
+<script src="assets/js/nav.js"></script>
 </html>

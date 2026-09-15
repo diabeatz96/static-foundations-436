@@ -1,0 +1,164 @@
+body {
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgb(70, 43, 64) 95%);
+    overflow-x: hidden;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #c9291e;
+    background: linear-gradient(90deg,rgb(103, 14, 82) 0%, rgba(255, 255, 255, 1) 30%, rgb(64, 149, 121) 42%);
+    z-index: 1;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo h2 {
+    margin-left: 10px;
+    color: #e8306a;
+    z-index: 2;
+    text-decoration: none;
+    font-size: 28px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav-links a {
+    display: block;
+    padding: 30px 16px;
+    color: #e9fdff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all ease-in-out 100ms;
+}
+.nav-links a:hover {
+    background-color: #846382;
+    opacity: 0.5rem;
+}
+.dropdown {
+    display: none;
+    width: 34px;
+}
+.dropdown .bar {
+    flex-basis: 100%; /* makes child 100% of the parents container in a width case */
+    height: 4px;
+    background-color: #fff3fc;
+    margin: 3px;
+}
+
+
+main {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.firstline {
+    font-weight: bold;
+    font-size: 30px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgb(21, 84, 77) 95%);
+    border-radius: 1.2rem;
+    padding: 1rem;
+}
+.desc {
+    max-width: 1000px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgb(49, 62, 24) 95%);
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    margin: 1rem;
+}
+.fun-fact {
+    padding: 1.5rem;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgb(75, 56, 71) 95%);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+main img {
+    max-width: 700px;
+    max-height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: rgb(99, 57, 84) solid 5px;
+    z-index: 0;
+    transition: scale 0.2s ease-in-out;
+    margin: 1.2rem;
+}
+main img:hover {
+    scale: 1.05;
+}
+
+
+/* responsive design elements that change 
+    when max-width condition is met */
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap; /* allows for flex items to go into new lines */
+        background: #bc73ab
+    }
+    .dropdown {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .logo {
+        height: 80px;
+    }
+    .nav-links {
+        display: none; /* toggles off links, instead showing the dropdown */
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    .nav-links li {
+        flex-basis: 100%;
+    }
+    .nav-link a {
+        text-align: center;
+        font-size: 28px;
+    }
+    .nav-links a:hover {
+        background-color: #636684;
+    }
+    main {
+        flex-wrap: wrap;
+    }
+    .hunter-logo {
+        width: 350px;
+    }
+    .firstline {
+        text-align: center;
+        font-size: 24px;
+        max-width: 300px;
+        margin: 0.5rem;
+    }
+    .desc {
+        max-width: 400px;
+        margin: 0.5rem;
+    }
+    .fun-fact {
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+    .img-container {
+        display: flex;
+        flex-direction: column;
+    }
+    main img {
+        max-width: 300px;
+        margin: 1rem;
+    }
+}

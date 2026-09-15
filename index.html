@@ -4,27 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunterpedia</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="/assets/css/home-theme.css">
 </head>
 <body>
-    <header>
-        <a href="/index.html" class="home-page"><h1>Hunterpedia</h1></a>
+    <!-- keep everything in a container -->
+    <div class="container">
         <nav class="navbar">
-            <a href="/page1-gon.html">Gon</a>
-            <a href="/page2-killua.html">Killua</a>
-            <a href="/page3-kurapika.html">Kurapika</a>
-            <a href="/page4-leorio.html">Leorio</a>
-            <a href="/page5-hisoka.html">Hisoka</a>
+            <div class="logo">
+                <a href="/index.html"><h2>Hunterpedia</h2></a>
+            </div>
+            <div class="dropdown">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/page1-gon.html">Gon</a></li>
+                <li><a href="/page2-killua.html">Killua</a></li>
+                <li><a href="/page3-kurapika.html">Kurapika</a></li>
+                <li><a href="/page4-leorio.html">Leorio</a></li>
+                <li><a href="/page5-hisoka.html">Hisoka</a></li>
+            </ul>
         </nav>
-    </header>
-    <main>
-        <h2>Welcome to Hunterpedia! An informational website about the Big 5 of Hunter x Hunter!</h2>
-        <p>Click any of the names in the navbar to view more information!</p>
-        <img src="/img/Hunter-X-Hunter-Logo-PNG-Clipart.png" alt="Hunter x Hunter Logo">
-    </main>
+        <main class="site">
+            <div class="content-container">
+                <h3>Welcome to Hunterpedia!</h3>
+                <p>Here you can view information on each of the Big 5 in Hunter x Hunter! Check out the top right to view.</p>
+                <img src="/img/Hunter-X-Hunter-Logo-PNG-Clipart.png" alt="Hunter x Hunter Logo" class="hunter-logo">
+            </div>
+            
+        </main>
+    </div>  
 
-    <footer>
-        <p>Site by paul-basile</p>
-    </footer>
 </body>
+<script src="assets/js/nav.js"></script>
 </html>

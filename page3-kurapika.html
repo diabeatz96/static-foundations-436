@@ -4,24 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunterpedia: Kurapika</title>
-    <link rel="stylesheet" href="assets/css/kurapika-theme.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/kurapika-theme.css">
 </head>
 <body>
-    <header class="header">
-        <a href="/index.html" class="home-page"><h1>Hunterpedia</h1></a>
+    <!-- keep everything in a container -->
+    <div class="container">
         <nav class="navbar">
-            <a href="/page1-gon.html">Gon</a>
-            <a href="/page2-killua.html">Killua</a>
-            <a href="/page3-kurapika.html">Kurapika</a>
-            <a href="/page4-leorio.html">Leorio</a>
-            <a href="/page5-hisoka.html">Hisoka</a>
+            <div class="logo">
+                <a href="/index.html"><h2>Hunterpedia</h2></a>
+            </div>
+            <div class="dropdown">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/page1-gon.html">Gon</a></li>
+                <li><a href="/page2-killua.html">Killua</a></li>
+                <li><a href="/page3-kurapika.html">Kurapika</a></li>
+                <li><a href="/page4-leorio.html">Leorio</a></li>
+                <li><a href="/page5-hisoka.html">Hisoka</a></li>
+            </ul>
         </nav>
-    </header>
-    <main>
+        <main class="site">
+            <div class="img-container">
+                <img src="/img/home-kurapika.jpg" alt="Kurapika Kurta">
+                <a href="https://x.com/K0R0SE/status/1791111108062814615"><img src="/img/kurapigoat.webp" alt="MY GOAT KURAPIKA"></a>
+            </div>
+            <p class="firstline">Kurapika Kurta is the last member of the Kurta Clan, driven by revenge.</p>
+            <p class="desc">Kurapika became a Hunter to make use of its many advantages, resources, and leeway
+                when conducting business. He is out for revenge on the notorious Phantom Troupe, responsible for 
+                murdering over 100 Kurta Clan members to obtain their Scarlet Eyes. He can use his chains to bind
+                his opponents hearts to a pact they must obey. He has a soft spot for Gon, Killua, and Leorio, but
+                he is still drowning in an indescribable emptiness.
+            </p>
+            <p class="fun-fact">
+                Kurapika's chain ability, Emperor Time, allows him to use 100% of each Nen category when combined
+                with his Scarlet Eyes, making him truly formidable.
+            </p>
+        </main>
+    </div>  
 
-    </main>
-    <footer>
-
-    </footer>
 </body>
+<script src="assets/js/nav.js"></script>
 </html>

@@ -4,24 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunterpedia: Leorio</title>
-    <link rel="stylesheet" href="assets/css/leorio-theme.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/leorio-theme.css">
 </head>
 <body>
-    <header class="header">
-        <a href="/index.html" class="home-page"><h1>Hunterpedia</h1></a>
+    <!-- keep everything in a container -->
+    <div class="container">
         <nav class="navbar">
-            <a href="/page1-gon.html">Gon</a>
-            <a href="/page2-killua.html">Killua</a>
-            <a href="/page3-kurapika.html">Kurapika</a>
-            <a href="/page4-leorio.html">Leorio</a>
-            <a href="/page5-hisoka.html">Hisoka</a>
+            <div class="logo">
+                <a href="/index.html"><h2>Hunterpedia</h2></a>
+            </div>
+            <div class="dropdown">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/page1-gon.html">Gon</a></li>
+                <li><a href="/page2-killua.html">Killua</a></li>
+                <li><a href="/page3-kurapika.html">Kurapika</a></li>
+                <li><a href="/page4-leorio.html">Leorio</a></li>
+                <li><a href="/page5-hisoka.html">Hisoka</a></li>
+            </ul>
         </nav>
-    </header>
-    <main>
+        <main class="site">
+            <div class="img-container">
+                <img src="/img/home-leorio.webp" alt="Leorio Paradinight">
+                <img src="/img/leoriockedin.webp" alt="Locked In">
+            </div>
+            <p class="firstline">Leorio Paradinight is a Hunter who wants a normal life in medicine.</p>
+            <p class="desc">Leorio is an aspiring doctor who became a Hunter for the money. He wants to
+                be a doctor to save others as there was a time where he could not save his close friend,
+                who passed away from disease. He so happened to meet Gon, Killua, and Kurapika, making his Hunter journey a more interesting one to say the
+                least. He helps out the three with their needs, but has no grudge or desire to a power monster.
+            </p>
+            <p class="fun-fact">
+                Leorio was the last of the 4 to learn Nen, and he gave Gon's father a much deserved punch!
+            </p>
+        </main>
+    </div>  
 
-    </main>
-    <footer>
-
-    </footer>
 </body>
+<script src="assets/js/nav.js"></script>
 </html>

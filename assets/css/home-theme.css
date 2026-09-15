@@ -1,25 +1,121 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body {
-    padding: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgb(61, 62, 61) 95%);
+    overflow-x: hidden;
 }
 
-header {
-    background-color: #e4dada;
-    padding: 10px;
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: linear-gradient(90deg, rgb(85, 85, 85) 0%, rgba(255, 255, 255, 1) 30%, rgb(216, 216, 216) 42%);
 }
-
-a {
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo h2 {
+    margin-left: 10px;
+    color: #111;
     text-decoration: none;
+    font-size: 28px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav-links a {
+    display: block;
+    padding: 30px 16px;
+    color: #111;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all ease-in-out 100ms;
+}
+.nav-links a:hover {
+    background-color: #f69292
+}
+.dropdown {
+    display: none;
+    width: 34px;
+}
+.dropdown .bar {
+    flex-basis: 100%; /* makes child 100% of the parents container in a width case */
+    height: 4px;
+    background-color: #111;
+    margin: 3px;
 }
 
-a:link {
-    color: black;
+
+main {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content-container h3 {
+    font-weight: bold;
+    font-size: 40px;
+    padding: 15px;
+}
+.content-container p {
+    font-size: 20px;
+    font-weight: bold;
+}
+.hunter-logo {
+    width: 500px;
+    padding-top: 30px;
 }
 
-a:visited {
-    color: black;
+/* responsive design elements that change 
+    when max-width condition is met */
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap; /* allows for flex items to go into new lines */
+    }
+    .dropdown {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .logo {
+        height: 80px;
+    }
+    .nav-links {
+        display: none; /* toggles off links, instead showing the dropdown */
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    .nav-links li {
+        flex-basis: 100%;
+    }
+    .nav-link a {
+        text-align: center;
+        font-size: 28px;
+    }
+    .nav-links a:hover {
+        background-color: #f69292;
+    }
+    main {
+        flex-wrap: wrap;
+    }
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+    }
+    .hunter-logo {
+        width: 350px;
+    }
 }

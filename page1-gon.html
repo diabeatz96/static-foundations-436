@@ -4,24 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunterpedia: Gon</title>
-    <link rel="stylesheet" href="assets/css/gon-theme.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/gon-theme.css">
 </head>
 <body>
-    <header class="header">
-        <a href="/index.html" class="home-page"><h1>Hunterpedia</h1></a>
+    <!-- keep everything in a container -->
+    <div class="container">
         <nav class="navbar">
-            <a href="/page1-gon.html">Gon</a>
-            <a href="/page2-killua.html">Killua</a>
-            <a href="/page3-kurapika.html">Kurapika</a>
-            <a href="/page4-leorio.html">Leorio</a>
-            <a href="/page5-hisoka.html">Hisoka</a>
+            <div class="logo">
+                <a href="/index.html"><h2>Hunterpedia</h2></a>
+            </div>
+            <div class="dropdown">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/page1-gon.html">Gon</a></li>
+                <li><a href="/page2-killua.html">Killua</a></li>
+                <li><a href="/page3-kurapika.html">Kurapika</a></li>
+                <li><a href="/page4-leorio.html">Leorio</a></li>
+                <li><a href="/page5-hisoka.html">Hisoka</a></li>
+            </ul>
         </nav>
-    </header>
-    <main>
+        <main class="site">
+            <div class="img-container">
+                <img src="/img/home-gon.webp" alt="Gon Freecss">
+                <img src="/img/gon.webp" alt="Gon smile">
+            </div>
+            <p class="firstline">Gon Freecss is a young, cheery Hunter and former fisherman!</p>
+            <p class="desc">Gon became a Hunter to find his father, who so happens to want NOTHING to do with him.
+                He lets nothing stop him from training to become the most powerful, and loathes the thought
+                of being any weaker than his current state. He may seem like an angel on the outside, but on the
+                inside is a sinister, unmoveable force yearning for more power.
+            </p>
+            <p class="fun-fact">His best friend is Killua, and his other friends are Kurapika and Leorio!
+                He would rather stay away from Hisoka, though.
+            </p>
+        </main>
+    </div>  
 
-    </main>
-    <footer>
-
-    </footer>
 </body>
+<script src="assets/js/nav.js"></script>
 </html>

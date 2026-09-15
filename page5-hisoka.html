@@ -4,24 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunterpedia: Hisoka</title>
-    <link rel="stylesheet" href="assets/css/hisoka-theme.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/hisoka-theme.css">
 </head>
 <body>
-    <header class="header">
-        <a href="/index.html" class="home-page"><h1>Hunterpedia</h1></a>
+    <!-- keep everything in a container -->
+    <div class="container">
         <nav class="navbar">
-            <a href="/page1-gon.html">Gon</a>
-            <a href="/page2-killua.html">Killua</a>
-            <a href="/page3-kurapika.html">Kurapika</a>
-            <a href="/page4-leorio.html">Leorio</a>
-            <a href="/page5-hisoka.html">Hisoka</a>
+            <div class="logo">
+                <a href="/index.html"><h2>Hunterpedia</h2></a>
+            </div>
+            <div class="dropdown">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/page1-gon.html">Gon</a></li>
+                <li><a href="/page2-killua.html">Killua</a></li>
+                <li><a href="/page3-kurapika.html">Kurapika</a></li>
+                <li><a href="/page4-leorio.html">Leorio</a></li>
+                <li><a href="/page5-hisoka.html">Hisoka</a></li>
+            </ul>
         </nav>
-    </header>
-    <main>
+        <main class="site">
+            <div class="img-container">
+                <img src="/img/home-hisoka.jpg" alt="Locked In">
+                <img src="/img/hisokoat.jpeg" alt="Leorio Paradinight">
+            </div>
+            <p class="firstline">Hisoka Morow is an uncanny Hunter seeking all the fun in the world.</p>
+            <p class="desc">
+                Hisoka became a hunter for more leeway to kill. That is his only reason. He can come across as
+                friend or foe with the previous 4, though most of the time he is minding his own business.
+                He spends his time looking for worthy opponents to fight, and particularly has his eye on the
+                leader of the Phantom Troupe, Chrollo Lucifer. He uses his Nen ability, Bungee Gum and sharp cards
+                to fight in battle. Though a strange person, he is a force to be reckoned with.
+            </p>
+            <p class="fun-fact">
+                Bungee Gum has both the properties of rubber and gum!
+            </p>
+        </main>
+    </div>  
 
-    </main>
-    <footer>
-
-    </footer>
 </body>
+<script src="assets/js/nav.js"></script>
 </html>
