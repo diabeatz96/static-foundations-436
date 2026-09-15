@@ -105,6 +105,7 @@ main img:hover {
 
     nav {
         flex-wrap: wrap; /* allows for flex items to go into new lines */
+        background: rgb(73, 161, 56);
     }
     .dropdown {
         display: flex;
