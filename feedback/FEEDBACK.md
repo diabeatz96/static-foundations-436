@@ -5,23 +5,23 @@
 
 > **How this review was made.** Your instructor reviewed this project with [Claude](https://claude.com) (Anthropic's AI) as a second set of eyes. Claude cloned the repo, read every line of all six pages and seven stylesheets, loaded the live site at phone, tablet and desktop widths, ran the W3C validator on every page, and opened and closed the hamburger menu. Every note and every point below was read and approved by your instructor. Same standard, same rubric, just more time spent looking at *your* code than one human has in a grading week.
 
-## Grade: 70 / 100
+## Grade: 74 / 100
 
 | Category | Points | Earned | One line |
 |---|:-:|:-:|---|
 | Semantic HTML | 20 | 12 | Real list nav, titles and alt text everywhere; but only `nav` and `main`, no `h1`, one validator error on every page |
-| CSS layout | 25 | 18 | Flexbox is real and well used; there is no Grid anywhere, and the brief required both |
+| CSS layout | 25 | 22 | Flexbox is real and well used; six copies of one stylesheet, and a typo that spread to all of them |
 | Responsive design | 15 | 13 | No horizontal scroll at any width, hamburger works; desktop-first, one dead rule |
 | JavaScript interaction | 15 | 12 | Menu toggle works and is readable; it's a `div`, not a button, and state is tracked by hand |
 | Repository and deployment | 15 | 8 | Deploy works; 85% of the site in one commit on the due date; README has 1 of 4 items |
 | Content and polish | 10 | 7 | Real writing, real theme, best-optimized images in the class; wrong alt text, empty desktop |
-| **Total** | **100** | **70** | **The site has personality. Two of the brief's six requirements were skipped.** |
+| **Total** | **100** | **74** | **The site has personality. The brief's first requirement was skipped.** |
 
 ## The short version
 
 Hunterpedia has a point of view. Each character gets a color world, the sticky nav follows you, the images are small and fast (you're the only student so far whose images are actually optimized), and the writing is yours. That's real.
 
-But the brief listed six objectives, and two of them didn't happen. **Semantic structure**: it asked for at least three content sections using semantic elements and one `h1`. Every page has exactly two semantic elements (`nav` and `main`), zero `h1`s, and a heading that jumps from `h2` to `h3`. **Flexbox and Grid, both**: there is no `display: grid` in any of your seven CSS files. Those two lines of the brief are worth 45 points between them, and that's where most of this grade went. The credit you did earn in those categories is for the parts you built well: the list nav, the titles and alt text, and Flexbox that is genuinely correct. The rest of the deductions are small. Those two are not.
+But the brief's first objective didn't happen. **Semantic structure**: it asked for at least three content sections using semantic elements and one `h1`. Every page has exactly two semantic elements (`nav` and `main`), zero `h1`s, and a heading that jumps from `h2` to `h3`. That one line of the brief is where most of this grade went. The credit you did earn there is for the parts you built well: the list nav, the titles, the alt text. The rest of the deductions are smaller and spread out: six copies of the same stylesheet, a validator error on every page, a thin README, and most of the site in one commit. (No Grid is fine. Flexbox alone satisfies the layout requirement, and yours is genuinely correct.)
 
 ## What the numbers looked like
 
@@ -98,7 +98,7 @@ Things Claude measured (so you know these aren't guesses):
 - **The hamburger is a `div`** ([L17–21](https://github.com/paul-basile/static-foundations-436/blob/5541740/index.html#L17-L21)). A keyboard user can't reach it, a screen reader doesn't know it's clickable. It should be a `<button aria-label="Menu" aria-expanded="false">`. The three bars can stay as `span`s inside it.
 - **Hisoka's alt text is Leorio's.** [page5-hisoka.html L32–33](https://github.com/paul-basile/static-foundations-436/blob/5541740/page5-hisoka.html#L32-L33) says `alt="Locked In"` and `alt="Leorio Paradinight"` on two pictures of Hisoka. Copy-paste left a trail. And "MY GOAT KURAPIKA" ([page3-kurapika.html L33](https://github.com/paul-basile/static-foundations-436/blob/5541740/page3-kurapika.html#L33)) is funny but alt text is for describing the image to someone who can't see it.
 
-## CSS layout — 18 / 25
+## CSS layout — 22 / 25
 
 **What's working**
 
@@ -107,7 +107,7 @@ Things Claude measured (so you know these aren't guesses):
 
 **What to change**
 
-- **There is no Grid.** Zero `display: grid` in seven files. The brief says "Flexbox and Grid, both. Each must do real layout work somewhere on the site." This is a hard requirement and it's the largest single deduction here. The good news: the home page is begging for it. Right now it says "check out the top right to view" instead of showing the characters. Replace that sentence with five character cards in a `display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))`, each card an `article` with the character's image and name linking to their page. That's Grid doing real work, a better home page, and a semantic section, all in one change.
+- **No Grid, and that's fine.** Flexbox or Grid satisfies the layout requirement, and your Flexbox does. But the home page is begging for a Grid anyway, so consider this a suggestion, not a deduction. Right now it says "check out the top right to view" instead of showing the characters. Replace that sentence with five character cards in a `display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))`, each card an `article` with the character's image and name linking to their page. That's Grid doing real work, a better home page, and a semantic section, all in one change.
 - **Six copies of the same stylesheet.** gon-theme.css and killua-theme.css share 140 of 158 lines verbatim. Six files, 929 lines, and only the colors differ. The proof it's a problem: there is a typo, `.nav-link a` instead of `.nav-links a` ([gon-theme.css L125](https://github.com/paul-basile/static-foundations-436/blob/5541740/assets/css/gon-theme.css#L125)), and because it was copied, it's now wrong in six files. That rule never applies, so your mobile menu links are never centered or enlarged like you intended. The fix is custom properties: one `site.css` with all the layout, and a tiny per-page file that only sets `--bg`, `--nav`, `--accent` on `body`.
 
   ```mermaid
@@ -209,12 +209,12 @@ flowchart TB
     subgraph p1["Fix first: these cost the most points"]
         direction TB
         a1["Add header, footer, section/article<br/>and one h1 to every page<br/>(the brief's first requirement)"]
-        a2["Use CSS Grid somewhere real:<br/>a 5-card character grid on the home page<br/>(the brief's second requirement)"]
         a3["Move the script tag inside body<br/>(same validator error on all 6 pages)"]
         a4["Commit after every feature.<br/>85 percent of the site landed in one commit<br/>on the due date"]
     end
     subgraph p2["Next: the brief asked for these"]
         direction TB
+        b0["Home page: five character cards<br/>in a CSS Grid (not required,<br/>but it fixes the home page)"]
         b1["README: description, how to run,<br/>live URL (3 of 4 items missing)"]
         b2["Make the hamburger a button with<br/>aria-expanded, not a div"]
         b3["Fix the Hisoka alt text<br/>(it says Leorio)"]
@@ -232,9 +232,9 @@ flowchart TB
     style p3 fill:#f2fbf1,stroke:#2e7d32
 ```
 
-1. **Build the character grid on the home page.** Five `article` cards in a CSS Grid, each linking to a character page. This one change gives you Grid, a `section`, and a home page that actually works. Two hours.
+1. **Build the character grid on the home page.** Five `article` cards in a CSS Grid, each linking to a character page. This one change gives you a `section`, a home page that actually works, and your first Grid. Two hours.
 2. **Fix the skeleton on every page.** `header` around the nav, `h1` for the page title, `footer` at the bottom, script tag inside `body`. Thirty minutes for six pages, and it clears every validator error.
-3. **Read the brief before Project 2 and make a checklist.** Two of the six objectives were missed here, and both were stated in bold. The site you built shows you can do the work. The checklist makes sure you do the *assigned* work.
+3. **Read the brief before Project 2 and make a checklist.** The first objective was missed here, and it was stated in bold. The site you built shows you can do the work. The checklist makes sure you do the *assigned* work.
 
 You made something with a personality, and that's harder to teach than Grid. Now go back and hit the requirements.
 
