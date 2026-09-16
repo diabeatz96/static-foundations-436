@@ -126,8 +126,8 @@ Things Claude measured (so you know these aren't guesses):
       subgraph next["Better: one layout file, one tiny theme per page"]
           direction TB
           s1["site.css: nav, main, dropdown,<br/>media query. ~150 lines, written once."]
-          s2["gon.css: 8 lines<br/>body { --bg: #1f421f; --accent: #b2eb63; ... }"]
-          s3["killua.css: 8 lines<br/>body { --bg: #345a6e; --accent: #4e8fd4; ... }"]
+          s2["gon.css: 8 lines<br/>body { --bg: #35;1f421f; --accent: #35;b2eb63; ... }"]
+          s3["killua.css: 8 lines<br/>body { --bg: #35;345a6e; --accent: #35;4e8fd4; ... }"]
           s4["...one per character"]
           s1 --> s2 & s3 & s4
       end
