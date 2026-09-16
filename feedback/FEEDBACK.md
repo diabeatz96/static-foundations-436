@@ -5,23 +5,23 @@
 
 > **How this review was made.** Your instructor reviewed this project with [Claude](https://claude.com) (Anthropic's AI) as a second set of eyes. Claude cloned the repo, read every line of all six pages and seven stylesheets, loaded the live site at phone, tablet and desktop widths, ran the W3C validator on every page, and opened and closed the hamburger menu. Every note and every point below was read and approved by your instructor. Same standard, same rubric, just more time spent looking at *your* code than one human has in a grading week.
 
-## Grade: 62 / 100
+## Grade: 70 / 100
 
 | Category | Points | Earned | One line |
 |---|:-:|:-:|---|
-| Semantic HTML | 20 | 9 | Only `nav` and `main`; no `h1` on any page; same validator error on all six pages |
-| CSS layout | 25 | 15 | Flexbox is real and well used; there is no Grid anywhere, and the brief required both |
-| Responsive design | 15 | 12 | No horizontal scroll at any width, hamburger works; desktop-first, one dead rule |
-| JavaScript interaction | 15 | 11 | Menu toggle works and is readable; it's a `div`, not a button, and state is tracked by hand |
+| Semantic HTML | 20 | 12 | Real list nav, titles and alt text everywhere; but only `nav` and `main`, no `h1`, one validator error on every page |
+| CSS layout | 25 | 18 | Flexbox is real and well used; there is no Grid anywhere, and the brief required both |
+| Responsive design | 15 | 13 | No horizontal scroll at any width, hamburger works; desktop-first, one dead rule |
+| JavaScript interaction | 15 | 12 | Menu toggle works and is readable; it's a `div`, not a button, and state is tracked by hand |
 | Repository and deployment | 15 | 8 | Deploy works; 85% of the site in one commit on the due date; README has 1 of 4 items |
 | Content and polish | 10 | 7 | Real writing, real theme, best-optimized images in the class; wrong alt text, empty desktop |
-| **Total** | **100** | **62** | **The site has personality. Two of the brief's six requirements were skipped.** |
+| **Total** | **100** | **70** | **The site has personality. Two of the brief's six requirements were skipped.** |
 
 ## The short version
 
 Hunterpedia has a point of view. Each character gets a color world, the sticky nav follows you, the images are small and fast (you're the only student so far whose images are actually optimized), and the writing is yours. That's real.
 
-But the brief listed six objectives, and two of them didn't happen. **Semantic structure**: it asked for at least three content sections using semantic elements and one `h1`. Every page has exactly two semantic elements (`nav` and `main`), zero `h1`s, and a heading that jumps from `h2` to `h3`. **Flexbox and Grid, both**: there is no `display: grid` in any of your seven CSS files. Those two lines of the brief are worth 45 points between them, and that's where this grade went. The rest of the deductions are small. Those two are not.
+But the brief listed six objectives, and two of them didn't happen. **Semantic structure**: it asked for at least three content sections using semantic elements and one `h1`. Every page has exactly two semantic elements (`nav` and `main`), zero `h1`s, and a heading that jumps from `h2` to `h3`. **Flexbox and Grid, both**: there is no `display: grid` in any of your seven CSS files. Those two lines of the brief are worth 45 points between them, and that's where most of this grade went. The credit you did earn in those categories is for the parts you built well: the list nav, the titles and alt text, and Flexbox that is genuinely correct. The rest of the deductions are small. Those two are not.
 
 ## What the numbers looked like
 
@@ -43,7 +43,7 @@ Things Claude measured (so you know these aren't guesses):
 
 ---
 
-## Semantic HTML — 9 / 20
+## Semantic HTML — 12 / 20
 
 **What's working**
 
@@ -98,7 +98,7 @@ Things Claude measured (so you know these aren't guesses):
 - **The hamburger is a `div`** ([L17–21](https://github.com/paul-basile/static-foundations-436/blob/5541740/index.html#L17-L21)). A keyboard user can't reach it, a screen reader doesn't know it's clickable. It should be a `<button aria-label="Menu" aria-expanded="false">`. The three bars can stay as `span`s inside it.
 - **Hisoka's alt text is Leorio's.** [page5-hisoka.html L32–33](https://github.com/paul-basile/static-foundations-436/blob/5541740/page5-hisoka.html#L32-L33) says `alt="Locked In"` and `alt="Leorio Paradinight"` on two pictures of Hisoka. Copy-paste left a trail. And "MY GOAT KURAPIKA" ([page3-kurapika.html L33](https://github.com/paul-basile/static-foundations-436/blob/5541740/page3-kurapika.html#L33)) is funny but alt text is for describing the image to someone who can't see it.
 
-## CSS layout — 15 / 25
+## CSS layout — 18 / 25
 
 **What's working**
 
@@ -148,7 +148,7 @@ Things Claude measured (so you know these aren't guesses):
 - **`overflow-x: hidden` on `body`** ([L3](https://github.com/paul-basile/static-foundations-436/blob/5541740/assets/css/home-theme.css#L3)) hides horizontal overflow instead of fixing it. Claude turned it off and measured: nothing overflows, so you don't need it. Delete it. If something ever does overflow, you want to see it.
 - Small: `transition: all` ([L38](https://github.com/paul-basile/static-foundations-436/blob/5541740/assets/css/home-theme.css#L38)) animates every property. Name the one you mean (`background-color`). Two semicolons on [gon-theme.css L80](https://github.com/paul-basile/static-foundations-436/blob/5541740/assets/css/gon-theme.css#L80).
 
-## Responsive design — 12 / 15
+## Responsive design — 13 / 15
 
 **What's working**
 
@@ -160,7 +160,7 @@ Things Claude measured (so you know these aren't guesses):
 - The dead `.nav-link a` rule (see CSS) means the mobile menu you designed (centered, 28px) is not the one that ships. Fix the typo and look at it again on a phone.
 - On desktop the content fills the top third of the screen and the bottom two thirds is gradient. Not a responsive bug, but see Polish.
 
-## JavaScript interaction — 11 / 15
+## JavaScript interaction — 12 / 15
 
 **What's working**
 
