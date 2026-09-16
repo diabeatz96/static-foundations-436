@@ -16,7 +16,7 @@ nav {
     display: flex;
     align-items: center;
 }
-.logo h2 {
+.logo h1 {
     margin-left: 10px;
     color: #111;
     text-decoration: none;
@@ -77,6 +77,7 @@ main {
     padding-top: 30px;
 }
 
+
 /* responsive design elements that change 
     when max-width condition is met */
 @media (max-width: 768px) {
@@ -99,7 +100,7 @@ main {
     .nav-links li {
         flex-basis: 100%;
     }
-    .nav-link a {
+    .nav-links a {
         text-align: center;
         font-size: 28px;
     }

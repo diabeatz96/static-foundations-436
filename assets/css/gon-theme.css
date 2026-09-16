@@ -17,7 +17,7 @@ nav {
     display: flex;
     align-items: center;
 }
-.logo h2 {
+.logo h1 {
     margin-left: 10px;
     color: #740808;
     text-decoration: none;
@@ -122,7 +122,7 @@ main img:hover {
     .nav-links li {
         flex-basis: 100%;
     }
-    .nav-link a {
+    .nav-links a {
         text-align: center;
         font-size: 28px;
     }
