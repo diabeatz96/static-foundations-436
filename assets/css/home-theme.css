@@ -12,6 +12,27 @@ nav {
     padding: 0 20px;
     background: linear-gradient(90deg, rgb(85, 85, 85) 0%, rgba(255, 255, 255, 1) 30%, rgb(216, 216, 216) 42%);
 }
+
+.bg-image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    min-height: 200px;
+    margin-top: 20px;
+    
+}
+
+.bg-image-grid-item {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.item1 { background-image: url("/img/home-gon.webp"); }
+.item2 { background-image: url("/img/home-killua.webp"); }
+.item3 { background-image: url("/img/home-kurapika.jpg"); }
+.item4 { background-image: url("/img/home-leorio.webp"); }
+.item5 { background-image: url("/img/home-hisoka.jpg"); }
+
+
 .logo {
     display: flex;
     align-items: center;
@@ -79,7 +100,7 @@ main {
 
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
