@@ -78,12 +78,22 @@ main {
 }
 
 
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(85, 85, 85) 0%, rgba(255, 255, 255, 1) 30%, rgb(216, 216, 216) 42%);
+    padding: 0.3rem;
+}
+
 /* responsive design elements that change 
     when max-width condition is met */
 @media (max-width: 768px) {
 
     nav {
         flex-wrap: wrap; /* allows for flex items to go into new lines */
+        background: lightgray;
     }
     .dropdown {
         display: flex;

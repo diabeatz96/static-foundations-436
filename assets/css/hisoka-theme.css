@@ -102,6 +102,15 @@ main img:hover {
     scale: 1.05;
 }
 
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.3rem;
+    background: linear-gradient(90deg,rgb(103, 14, 82) 0%, rgba(255, 255, 255, 1) 30%, rgb(64, 149, 121) 42%);
+}
+
 
 /* responsive design elements that change 
     when max-width condition is met */
